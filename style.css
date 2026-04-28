@@ -2,61 +2,91 @@
 * {
     margin: 0;
 }
-
+/* 배경색 지정 */
 body{
     background-color: #F6F7FA;
 }
+/* 콘텐츠 영역 중앙 정렬 */
 main{
-    width: 1000px;
+    /* 기본 가로 길이 100px로 설정 */
+    width: 1000px; 
+    /* 가로 가운데 정렬 */
     margin-left: auto;
     margin-right: auto;
+    /* 패딩값 부여 */
     padding:30px;
 }
+/* 요약 카드 영역 */
 #cardArea{
+    /* 가로 길이를 부모태그(main)의 100%로 설정 */
     width: 100%;
+    /* flex 레이아웃 사용 */
     display: flex;
+    /* 각 행의 요소들에 균일한 간격 부여 */
     justify-content: space-between;
+    /* 요소가 한 행의 길이를 넘어서면 다음줄로 줄바꿈 */
     flex-wrap: wrap;
+    /* 열 간격 설정 */
     row-gap: 30px;
 }
-
+/* 요약카드 요소 */
 .card{
+    /* 가로 세로 길이 설정 */
     width: 300px;
     height: 350px;
+    /* 테두리 곡률 설정 */
     border-radius: 10px;
+    /* 배경색 설정 */
     background-color: white;
+    /* 박스 그림자 효과 */
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* 내부요소가 넘치면 가리기(이미지에도 테두리 곡률 적용 목적) */
     overflow: hidden;
+    /* 전환 애니메이션 설정 */
     transition: transform 0.3s, box-shadow 0.3s;
+    /* 포지션 설정(스택 뱃지를 위에 띄우기 위함) */
     position: relative;
-
 }
+/* 카드에 마우스 올려놓았을 때 효과 */
 .card:hover{
+    /* 위로 8px만큼 이동 */
     transform: translateY(-8px);
+    /* 테두리 색 추가 */
     outline: 2px solid rgb(163, 0, 222);
+    /* 그림자 커지게 */
     box-shadow: rgba(70, 70, 70, 0.2) 0px 4px 11px 2px;
 }
+/* 스택 뱃지 */
 .stackBadge{
+    /* 위로 띄우기 */
     position: absolute;
+    /* 내부 텍스트 가운데로 정렬 */
     text-align: center;
+    /* 부모요소(.card) 의 우측에서 12px 떨어지게 설정 */
     right: 12px;
+    /* 패딩값 부여 각각 상 우 하 좌 값 */
     padding: 1px 10px 1px 10px;
+
     height: 30px;
     background-color: #F6F7FA;
+    /* 투명도 설정 */
     opacity: 0.7;
     border-radius: 25px;
     margin-top: 15px;
 }
+/* 스택뱃지 내부 글자 미세조정 */
 .stackBadge h4{
     margin-top: 6px;
 }
+/* 카드에서 이미지 밑 글자들에게 패딩값 부여 */
 .cardBody{
     padding-left: 15px;
     padding-top: 5px;
 }
 .cardBody h5{
     margin-top: 10px;
-} 
+}
+ /* 각 파트에 맞는 색상 부여  */
 .fe{
     color: rgba(123, 205, 1, 0.938);
 }
@@ -69,14 +99,17 @@ main{
 .cardBody p{
     margin-top: 10px;
 }
+/* 카드내 이미지 설정 */
 .card img{
+    /* 카드 가로 넓이 꽉 채우기 */
     width: 100%;
     height: 250px;
+    /* 사진 찌그러지지 않게 */
     object-fit: cover;
-    overflow: hidden;
+    /* 사진을 중앙 위부터 보이게 함 */
     object-position: center top;
 }
-
+/* 상세 정보 카드 */
 .info{
     margin-top: 50px;
     border-radius: 10px;
@@ -84,14 +117,17 @@ main{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 20px;
     padding-top: 25px;
+    /* 글자 줄 간격 설정 */
     line-height: 25px;
 }
 
+/* 반응형 구현 (화면이 1080px 이하일 때 콘텐츠영역(main)의 가로길이를 650으로 줄여 요약카드가 한 행에 2개씩 자리하도록 함. */
 @media (max-width: 1080px) {
     main{
         width: 650px;
     }
 }
+/* 위와 동일원리, 요약카드 하나 크기와 main 가로길이 일치시켜 하나만 자리하도록 설정 */
 @media (max-width: 730px) {
     main{
         width: 300px;
