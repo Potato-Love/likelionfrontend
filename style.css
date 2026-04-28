@@ -1,0 +1,78 @@
+/* 전체 지정(*) 후 초기화 */
+* {
+    margin: 0;
+}
+
+body{
+    background-color: #F6F7FA;
+}
+main{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:30px;
+}
+#cardArea{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.card{
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+
+}
+.card:hover{
+    transform: translateY(-8px);
+    outline: 2px solid rgb(163, 0, 222);
+    box-shadow: rgba(70, 70, 70, 0.2) 0px 4px 11px 2px;
+}
+.stackBadge{
+    position: absolute;
+    text-align: center;
+    right: 12px;
+    padding: 1px 10px 1px 10px;
+    height: 30px;
+    background-color: #F6F7FA;
+    opacity: 0.7;
+    border-radius: 25px;
+    margin-top: 15px;
+}
+.stackBadge h4{
+    margin-top: 6px;
+}
+.cardBody{
+    padding-left: 15px;
+    padding-top: 5px;
+}
+.cardBody h5{
+    margin-top: 10px;
+} 
+.fe{
+    color: rgba(123, 205, 1, 0.938);
+}
+.be{
+    color: rgb(95, 43, 226);
+}
+.ds{
+    color: palevioletred;
+}
+.cardBody p{
+    margin-top: 10px;
+}
+.card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    overflow: hidden;
+    object-position: center top;
+}
