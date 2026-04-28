@@ -76,3 +76,28 @@ main{
     overflow: hidden;
     object-position: center top;
 }
+
+.info{
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    padding-top: 25px;
+    line-height: 25px;
+}
+
+@media (max-width: 1080px) {
+    main{
+        width: 650px;
+    }
+}
+@media (max-width: 730px) {
+    main{
+        width: 300px;
+    }
+    #cardArea{
+        justify-content: center;
+    }
+
+}
