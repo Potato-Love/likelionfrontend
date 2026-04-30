@@ -15,6 +15,35 @@
 <body>
     <!-- 실제 요소들이 들어갈 곳에 main 시멘틱 태그 사용 -->
     <main>
+        <div id="formArea">
+            <section id="inputSection">
+                <div class="inputGroup">
+                    <label for="nameInput">이름</label>
+                    <input type="text" id="nameInput" placeholder="이름을 입력하세요">
+                </div>
+
+                <div class="inputGroup">
+                    <label for="partInput">파트</label>
+                    <select id="partInput">
+                        <option value="Frontend">Frontend</option>
+                        <option value="Backend">Backend</option>
+                        <option value="Design">Design</option>
+                    </select>
+                </div>
+
+                <div class="inputGroup">
+                    <label for="introInput">한 줄 소개</label>
+                    <input type="text" id="introInput" placeholder="소개글을 입력하세요">
+                </div>
+
+                <div class="inputGroup">
+                    <label for="stackInput">기술 스택</label>
+                    <input type="text" id="stackInput" placeholder="예: React">
+                </div>
+
+                <button id="addBtn">사자 추가하기</button>
+            </section>
+        </div>
         <!-- 요약 카드 영역 -->
         <div id="cardArea">
             <!-- 카드 -->
