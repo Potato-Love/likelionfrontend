@@ -15,11 +15,16 @@
 <body>
     <!-- 실제 요소들이 들어갈 곳에 main 시멘틱 태그 사용 -->
     <main>
+        <div id="buttonArea">
+            <button id="showBtn">아기사자 추가</button>
+            <button>아기사자 삭제</button>
+            <h3>총 0명</h3>
+        </div>
         <div id="formArea">
             <section id="inputSection">
                 <div class="inputGroup">
-                    <label for="nameInput">이름</label>
-                    <input type="text" id="nameInput" placeholder="이름을 입력하세요">
+                    <label for="nameInput">이름: </label>
+                    <input type="text" id="nameInput" required placeholder="이름을 입력하세요">
                 </div>
 
                 <div class="inputGroup">
@@ -41,7 +46,7 @@
                     <input type="text" id="stackInput" placeholder="예: React">
                 </div>
 
-                <button id="addBtn">사자 추가하기</button>
+                <button id="addBtn" type="submit">사자 추가하기</button>
             </section>
         </div>
         <!-- 요약 카드 영역 -->

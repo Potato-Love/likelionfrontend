@@ -16,6 +16,45 @@ main{
     /* 패딩값 부여 */
     padding:30px;
 }
+.show{
+display: block !important;
+}
+#buttonArea{
+    display: flex;
+    gap: 13px;
+    margin-bottom: 30px;
+}
+#buttonArea h3{
+    color: rgb(86, 86, 86);
+    font-weight: bold;
+    margin-top: 5px;
+}
+#buttonArea button{
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 8px 9px 7px 9px;
+    border: 1px solid #aeaeae ;
+}
+#buttonArea button:hover{
+    border: 1px solid rgb(163, 0, 222);
+}
+
+#formArea{
+    display: none;
+    background-color: white;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+        /* 테두리 곡률 설정 */
+    border-radius: 10px;
+    /* 배경색 설정 */
+    background-color: white;
+    /* 박스 그림자 효과 */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    font-weight: bold;
+}
+
 /* 요약 카드 영역 */
 #cardArea{
     /* 가로 길이를 부모태그(main)의 100%로 설정 */
@@ -23,11 +62,11 @@ main{
     /* flex 레이아웃 사용 */
     display: flex;
     /* 각 행의 요소들에 균일한 간격 부여 */
-    justify-content: space-between;
-    /* 요소가 한 행의 길이를 넘어서면 다음줄로 줄바꿈 */
     flex-wrap: wrap;
     /* 열 간격 설정 */
     row-gap: 30px;
+    
+    column-gap: 50px;
 }
 /* 요약카드 요소 */
 .card{

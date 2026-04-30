@@ -1,13 +1,16 @@
 const member = [];
 
 let button = document.getElementById("addBtn");
+const  showBtn = document.getElementById("showBtn"); 
+
+showBtn.onclick = function(){ document.getElementById('formArea').classList.toggle('show');}
 
 button.onclick = function addData(){
     const newMember = {
         name: document.getElementById('nameInput').value,
         part: document.getElementById('partInput').value,
-        tech: document.getElementById('introInput').value,
-        simpleIntro: document.getElementById('stackInput').value,
+        tech: document.getElementById('stackInput').value,
+        simpleIntro: document.getElementById('introInput').value,
     }
 
     member.push(newMember);
