@@ -1,12 +1,16 @@
 const member = [];
 
-let button = document.getElementById("addBtn");
-let showBtn = document.getElementById('showBtn');
+// DOM 지정
+const button = document.getElementById("addBtn");
+const showBtn = document.getElementById('showBtn');
+const deleteBtn = document.getElementById('deleteBtn');
 
+// 폼 드롭다운
 showBtn.onclick = function(){
     document.getElementById('formArea').classList.toggle('show');
 }
 
+//추가버튼 클릭하면 입력값 객체에 저장하고 member 배열로 전달
 button.onclick = function addData(){
     const newMember = {
         name: document.getElementById('nameInput').value,
@@ -24,6 +28,7 @@ button.onclick = function addData(){
     render();
 }
 
+// 화면에 렌더링
 function render(){
     const cardArea = document.getElementById('cardArea');
     const infoArea = document.getElementById('infoArea');
@@ -86,6 +91,13 @@ function render(){
         cardArea.insertAdjacentHTML('beforeend', card);
         infoArea.insertAdjacentHTML('beforeend', info);
     }
-
+    document.getElementById('length').innerHTML = `총 ${member.length}명`
 }
+
+// 가장 뒤에 있는 데이터 삭제
+deleteBtn.onclick = function del(){
+    member.pop()
+    render()
+}
+
 
