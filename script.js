@@ -76,7 +76,7 @@ function render(){
             <ul>
                 <li>Email: ${i.email}</li>
                 <li>Phone: ${i.phone}</li>
-                <li>${i.email}</li>
+                <li>${i.site}</li>
             </ul>
             <br>
             <h4>관심 기술</h4>
