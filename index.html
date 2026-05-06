@@ -15,6 +15,58 @@
 <body>
     <!-- 실제 요소들이 들어갈 곳에 main 시멘틱 태그 사용 -->
     <main>
+        <div id="buttonArea">
+            <button id="showBtn">아기사자 추가</button>
+            <button>아기사자 삭제</button>
+            <h3>총 0명</h3>
+        </div>
+        <div id="formArea">
+            <section id="inputSection">
+                <div class="inputGroup">
+                    <label for="nameInput">이름: </label>
+                    <input type="text" id="nameInput" required placeholder="이름을 입력하세요">
+                </div>
+
+                <div class="inputGroup">
+                    <label for="partInput">파트</label>
+                    <select id="partInput">
+                        <option value="Frontend">Frontend</option>
+                        <option value="Backend">Backend</option>
+                        <option value="Design">Design</option>
+                    </select>
+                </div>
+                <div class="inputGroup full">
+                    <label for="stackInput">기술 스택</label>
+                    <input type="text" id="stackInput" placeholder="예: React">
+                </div>
+
+                <div class="inputGroup full">
+                    <label for="introInput">한 줄 소개</label>
+                    <input type="text" id="introInput" placeholder="짧은 소개글을 입력하세요">
+                </div>
+
+                <div class="inputGroup full">
+                    <label for="longIntroInput">자기소개</label>
+                    <input type="text" id="longIntroInput" placeholder="소개글을 입력하세요">
+                </div>
+                                                            
+                <div class="inputGroup">
+                    <label for="emailInput">이메일</label>
+                    <input type="email" id="emailInput" placeholder="예: likelion@example.com">
+                </div>
+
+                <div class="inputGroup">
+                    <label for="phoneInput">연락처</label>
+                    <input type="tel" id="phoneInput" placeholder="예: 010-1234-5678">
+                </div>
+
+                <div class="inputGroup full">
+                    <label for="websiteInput">웹사이트</label>
+                    <input type="url" id="websiteInput" placeholder="예: https://example.com">
+                </div>
+                <button id="addBtn" type="submit">추가하기</button>
+            </section>
+        </div>
         <!-- 요약 카드 영역 -->
         <div id="cardArea">
             <!-- 카드 -->
@@ -105,234 +157,237 @@
             </div>
         </div>
         <!-- 상세 내용 영역 -->
-        <div class="info">
-            <h2>김아기사자</h2>
-            <h5 class="fe">Frontend</h5>
-            <p style="color: gray;">LION TRACK</p>
-            <!-- 줄바꿈 처리 -->
-            <br>
-            <h4>자기소개</h4>
-            <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
-            <br>
-            <!-- 순서 없는 목룍 -->
-            <ul>
-                <li>Email: likelion@example.com</li>
-                <li>Phone: 010-1234-5678</li>
-                <li>https://exammple.com</li>
-            </ul>
-            <br>
-            <h4>관심 기술</h4>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-            </ul>
-            <br>
-            <h4>한 마디</h4>
-            <p>구조적인 UI를 고민합니다.</p>
-        </div>
-        <!-- 위와 동일 반복 -->
-        <div class="info">
-            <h2>이아기사자</h2>
-            <h5 class="be">Backend</h5>
-            <p style="color: gray;">LION TRACK</p>
-            <br>
-            <h4>자기소개</h4>
-            <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
-            <br>
-            <h4>연락처</h4>
-            <ul>
-                <li>Email: likelion@example.com</li>
-                <li>Phone: 010-1234-5678</li>
-                <li>https://exammple.com</li>
-            </ul>
-            <br>
-            <h4>관심 기술</h4>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-            </ul>
-            <br>
-            <h4>한 마디</h4>
-            <p>구조적인 UI를 고민합니다.</p>
-        </div>
-        <div class="info">
-            <h2>박아기사자</h2>
-            <h5 class="ds">Design</h5>
-            <p style="color: gray;">LION TRACK</p>
-            <br>
-            <h4>자기소개</h4>
-            <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
-            <br>
-            <h4>연락처</h4>
-            <ul>
-                <li>Email: likelion@example.com</li>
-                <li>Phone: 010-1234-5678</li>
-                <li>https://exammple.com</li>
-            </ul>
-            <br>
-            <h4>관심 기술</h4>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-            </ul>
-            <br>
-            <h4>한 마디</h4>
-            <p>구조적인 UI를 고민합니다.</p>
-        </div>
-        <div class="info">
-            <h2>최아기사자</h2>
-            <h5 class="fe">Frontend</h5>
-            <p style="color: gray;">LION TRACK</p>
-            <br>
-            <h4>자기소개</h4>
-            <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
-            <br>
-            <h4>연락처</h4>
-            <ul>
-                <li>Email: likelion@example.com</li>
-                <li>Phone: 010-1234-5678</li>
-                <li>https://exammple.com</li>
-            </ul>
-            <br>
-            <h4>관심 기술</h4>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-            </ul>
-            <br>
-            <h4>한 마디</h4>
-            <p>구조적인 UI를 고민합니다.</p>
-        </div>
-        <div class="info">
-            <h2>정아기사자</h2>
-            <h5 class="ds">Design</h5>
-            <p style="color: gray;">LION TRACK</p>
-            <br>
-            <h4>자기소개</h4>
-            <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
-            <br>
-            <h4>연락처</h4>
-            <ul>
-                <li>Email: likelion@example.com</li>
-                <li>Phone: 010-1234-5678</li>
-                <li>https://exammple.com</li>
-            </ul>
-            <br>
-            <h4>관심 기술</h4>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-            </ul>
-            <br>
-            <h4>한 마디</h4>
-            <p>구조적인 UI를 고민합니다.</p>
-        </div>
-        <div class="info">
-            <h2>강아기사자</h2>
-            <h5 class="be">Backend</h5>
-            <p style="color: gray;">LION TRACK</p>
-            <br>
-            <h4>자기소개</h4>
-            <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
-            <br>
-            <h4>연락처</h4>
-            <ul>
-                <li>Email: likelion@example.com</li>
-                <li>Phone: 010-1234-5678</li>
-                <li>https://exammple.com</li>
-            </ul>
-            <br>
-            <h4>관심 기술</h4>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-            </ul>
-            <br>
-            <h4>한 마디</h4>
-            <p>구조적인 UI를 고민합니다.</p>
-        </div>
-        <div class="info">
-            <h2>조아기사자</h2>
-            <h5 class="be">Backend</h5>
-            <p style="color: gray;">LION TRACK</p>
-            <br>
-            <h4>자기소개</h4>
-            <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
-            <br>
-            <h4>연락처</h4>
-            <ul>
-                <li>Email: likelion@example.com</li>
-                <li>Phone: 010-1234-5678</li>
-                <li>https://exammple.com</li>
-            </ul>
-            <br>
-            <h4>관심 기술</h4>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-            </ul>
-            <br>
-            <h4>한 마디</h4>
-            <p>구조적인 UI를 고민합니다.</p>
-        </div>
-        <div class="info">
-            <h2>윤아기사자</h2>
-            <h5 class="fe">Frontend</h5>
-            <p style="color: gray;">LION TRACK</p>
-            <br>
-            <h4>자기소개</h4>
-            <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
-            <br>
-            <h4>연락처</h4>
-            <ul>
-                <li>Email: likelion@example.com</li>
-                <li>Phone: 010-1234-5678</li>
-                <li>https://exammple.com</li>
-            </ul>
-            <br>
-            <h4>관심 기술</h4>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-            </ul>
-            <br>
-            <h4>한 마디</h4>
-            <p>구조적인 UI를 고민합니다.</p>
-        </div>
-        <div class="info">
-            <h2>장아기사자</h2>
-            <h5 class="ds">Design</h5>
-            <p style="color: gray;">LION TRACK</p>
-            <br>
-            <h4>자기소개</h4>
-            <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
-            <br>
-            <h4>연락처</h4>
-            <ul>
-                <li>Email: likelion@example.com</li>
-                <li>Phone: 010-1234-5678</li>
-                <li>https://exammple.com</li>
-            </ul>
-            <br>
-            <h4>관심 기술</h4>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-            </ul>
-            <br>
-            <h4>한 마디</h4>
-            <p>구조적인 UI를 고민합니다.</p>
+        <div id="infoArea">
+            <div class="info">
+                <h2>김아기사자</h2>
+                <h5 class="fe">Frontend</h5>
+                <p style="color: gray;">LION TRACK</p>
+                <!-- 줄바꿈 처리 -->
+                <br>
+                <h4>자기소개</h4>
+                <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
+                <br>
+                <!-- 순서 없는 목룍 -->
+                <ul>
+                    <li>Email: likelion@example.com</li>
+                    <li>Phone: 010-1234-5678</li>
+                    <li>https://exammple.com</li>
+                </ul>
+                <br>
+                <h4>관심 기술</h4>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                </ul>
+                <br>
+                <h4>한 마디</h4>
+                <p>구조적인 UI를 고민합니다.</p>
+            </div>
+            <!-- 위와 동일 반복 -->
+            <div class="info">
+                <h2>이아기사자</h2>
+                <h5 class="be">Backend</h5>
+                <p style="color: gray;">LION TRACK</p>
+                <br>
+                <h4>자기소개</h4>
+                <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
+                <br>
+                <h4>연락처</h4>
+                <ul>
+                    <li>Email: likelion@example.com</li>
+                    <li>Phone: 010-1234-5678</li>
+                    <li>https://exammple.com</li>
+                </ul>
+                <br>
+                <h4>관심 기술</h4>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                </ul>
+                <br>
+                <h4>한 마디</h4>
+                <p>구조적인 UI를 고민합니다.</p>
+            </div>
+            <div class="info">
+                <h2>박아기사자</h2>
+                <h5 class="ds">Design</h5>
+                <p style="color: gray;">LION TRACK</p>
+                <br>
+                <h4>자기소개</h4>
+                <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
+                <br>
+                <h4>연락처</h4>
+                <ul>
+                    <li>Email: likelion@example.com</li>
+                    <li>Phone: 010-1234-5678</li>
+                    <li>https://exammple.com</li>
+                </ul>
+                <br>
+                <h4>관심 기술</h4>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                </ul>
+                <br>
+                <h4>한 마디</h4>
+                <p>구조적인 UI를 고민합니다.</p>
+            </div>
+            <div class="info">
+                <h2>최아기사자</h2>
+                <h5 class="fe">Frontend</h5>
+                <p style="color: gray;">LION TRACK</p>
+                <br>
+                <h4>자기소개</h4>
+                <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
+                <br>
+                <h4>연락처</h4>
+                <ul>
+                    <li>Email: likelion@example.com</li>
+                    <li>Phone: 010-1234-5678</li>
+                    <li>https://exammple.com</li>
+                </ul>
+                <br>
+                <h4>관심 기술</h4>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                </ul>
+                <br>
+                <h4>한 마디</h4>
+                <p>구조적인 UI를 고민합니다.</p>
+            </div>
+            <div class="info">
+                <h2>정아기사자</h2>
+                <h5 class="ds">Design</h5>
+                <p style="color: gray;">LION TRACK</p>
+                <br>
+                <h4>자기소개</h4>
+                <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
+                <br>
+                <h4>연락처</h4>
+                <ul>
+                    <li>Email: likelion@example.com</li>
+                    <li>Phone: 010-1234-5678</li>
+                    <li>https://exammple.com</li>
+                </ul>
+                <br>
+                <h4>관심 기술</h4>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                </ul>
+                <br>
+                <h4>한 마디</h4>
+                <p>구조적인 UI를 고민합니다.</p>
+            </div>
+            <div class="info">
+                <h2>강아기사자</h2>
+                <h5 class="be">Backend</h5>
+                <p style="color: gray;">LION TRACK</p>
+                <br>
+                <h4>자기소개</h4>
+                <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
+                <br>
+                <h4>연락처</h4>
+                <ul>
+                    <li>Email: likelion@example.com</li>
+                    <li>Phone: 010-1234-5678</li>
+                    <li>https://exammple.com</li>
+                </ul>
+                <br>
+                <h4>관심 기술</h4>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                </ul>
+                <br>
+                <h4>한 마디</h4>
+                <p>구조적인 UI를 고민합니다.</p>
+            </div>
+            <div class="info">
+                <h2>조아기사자</h2>
+                <h5 class="be">Backend</h5>
+                <p style="color: gray;">LION TRACK</p>
+                <br>
+                <h4>자기소개</h4>
+                <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
+                <br>
+                <h4>연락처</h4>
+                <ul>
+                    <li>Email: likelion@example.com</li>
+                    <li>Phone: 010-1234-5678</li>
+                    <li>https://exammple.com</li>
+                </ul>
+                <br>
+                <h4>관심 기술</h4>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                </ul>
+                <br>
+                <h4>한 마디</h4>
+                <p>구조적인 UI를 고민합니다.</p>
+            </div>
+            <div class="info">
+                <h2>윤아기사자</h2>
+                <h5 class="fe">Frontend</h5>
+                <p style="color: gray;">LION TRACK</p>
+                <br>
+                <h4>자기소개</h4>
+                <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
+                <br>
+                <h4>연락처</h4>
+                <ul>
+                    <li>Email: likelion@example.com</li>
+                    <li>Phone: 010-1234-5678</li>
+                    <li>https://exammple.com</li>
+                </ul>
+                <br>
+                <h4>관심 기술</h4>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                </ul>
+                <br>
+                <h4>한 마디</h4>
+                <p>구조적인 UI를 고민합니다.</p>
+            </div>
+            <div class="info">
+                <h2>장아기사자</h2>
+                <h5 class="ds">Design</h5>
+                <p style="color: gray;">LION TRACK</p>
+                <br>
+                <h4>자기소개</h4>
+                <p>HTML과 CSS를 처음 배우면서 화면이 어떻게 구성되는지에 흥미를 느꼈습니다. 단순히 보이는 결과보다, 왜 이런 구조가 필요한지 이해하려고 노력하고 있습니다. 시멘틱 태그의 중요성과 CSS의 계층적 구조를 깊이 있게 학습하면서, 사용자 경험을 향상시키는 구조적인 UI 설계에 매력을 느끼고 있습니다. 앞으로도 더 나은 웹 접근성과 유지보수 가능한 코드를 작성하는 것이 목표입니다.</p>
+                <br>
+                <h4>연락처</h4>
+                <ul>
+                    <li>Email: likelion@example.com</li>
+                    <li>Phone: 010-1234-5678</li>
+                    <li>https://exammple.com</li>
+                </ul>
+                <br>
+                <h4>관심 기술</h4>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                </ul>
+                <br>
+                <h4>한 마디</h4>
+                <p>구조적인 UI를 고민합니다.</p>
+            </div>
         </div>
     </main>
     
+    <script src="script.js"></script>
 </body>
 </html>
